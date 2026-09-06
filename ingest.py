@@ -21,10 +21,11 @@ def load_faq_data():
     return documents
 
 
+# Build a searchable index from the FAQ documents
 def build_index(documents):
     index = Index(
-        text_fields=['question', 'section', 'answer'],
-        keyword_fields=['course']
+        text_fields=['question', 'section', 'answer'], # search inside it
+        keyword_fields=['course']    # exact match/filtering 
     )
     index.fit(documents)
     return index
