@@ -1,5 +1,7 @@
 import requests
 from minsearch import Index
+from dotenv import load_dotenv
+
 
 
 def load_faq_data():
